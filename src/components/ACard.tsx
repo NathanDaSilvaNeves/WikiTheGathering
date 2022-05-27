@@ -5,7 +5,7 @@ const ACard = ({ card }: ICard["cards"]) => {
     const isRectoVerso = card.card_faces
     let img;
     if (isRectoVerso) {
-        img = <img src={card.card_faces[0].image_uris.small} alt={card.name} />
+        img = <img src={isRectoVerso[1].image_uris.small} alt={card.name} /> 
     } else {
         img = <img src={card.image_uris.small} alt={card.name} />
     }
