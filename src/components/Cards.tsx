@@ -7,7 +7,7 @@ const Cards = ({ cards }) => {
     return (
         <div className="Card">
 
-            <ul>
+            <ul className='Ul-card'>
                 {
                     cards?.data?.map((card: ICard["cards"], index: ICard["index"]) => (<ACard key={index} card={card} />))
                 }
