@@ -20,7 +20,24 @@ code {
   flex-direction: row;
 }
 
-.card {
-  height: 10%;
-  width: 25%;
+@media screen and (min-width: 768px) {
+  .card {
+    height: 10%;
+    width: 25%;
+  }
 }
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .card {
+    height: 10%;
+    width: 50%;
+  }
+}
+
+  @media screen and (max-width: 600px) {
+    .card {
+      height: 10%;
+      width: 100%;
+    }
+}
+
