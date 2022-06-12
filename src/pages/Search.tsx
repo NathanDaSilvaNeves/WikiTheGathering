@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState} from 'react';
 import Cards from '../components/Cards.tsx';
+import Return from '../components/Return.tsx';
 import { SearchContext } from '../components/SearchContext.tsx';
 
 const Search = () => {
@@ -50,6 +51,7 @@ const Search = () => {
     return (
         <div>
             <h1>Search</h1>
+            <Return />
             <div>
                 <input type="text" onChange={getInputValue} required></input>
                 <button onClick={() =>research()}>Research card</button>

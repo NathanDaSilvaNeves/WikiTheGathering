@@ -2,6 +2,7 @@ import React, {useContext, useEffect, useState} from 'react';
 import { ManaContext } from '../components/ManaContext.tsx';
 import Cards from '../components/Cards.tsx';
 import Searchbar from '../components/Searchbar.tsx';
+import Return from '../components/Return.tsx';
 
 function whichMana(Mana) {
     let chosenMana;
@@ -50,6 +51,7 @@ const List = () => {
     return (
         <div>
             <h1>List</h1>
+            <Return />
             <Searchbar />
             <p>the choosen mana is {mana}</p>
             <Cards cards={data} />
