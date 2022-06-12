@@ -1,40 +1,52 @@
 .manachoice{
-    //justify-content: space-around;
-    //align-items:flex-end;
-    width: 30%;
-    min-width: 130px;
-    background: lightgray;
+  .Ul-mana {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-direction: row;
+  }
+  
+  .mana{  
     border-radius: 20px;
     padding: 10px;
-    float: left;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
     img {
       display: block;
       margin: auto;
       height: 100px;
+      margin-bottom: 10px;
+    }
+
+    &:hover{
+      background: lightgray;
     }
   }
 
   @media screen and (min-width: 768px) {
-    .manachoice {
+    .mana {
       height: 10%;
       width: 25%;
     }
   }
   
   @media screen and (min-width: 600px) and (max-width: 768px) {
-    .manachoice {
+    .mana {
       height: 10%;
       width: 50%;
     }
   }
   
     @media screen and (max-width: 600px) {
-      .manachoice {
+      .mana {
         height: 10%;
         width: 100%;
       }
+  }
+
   }

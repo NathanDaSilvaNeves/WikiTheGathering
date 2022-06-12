@@ -5,7 +5,7 @@ const ManaChoice = (mana: ManaContext) => {
   {
     console.log(mana.mana.Color);
     return (
-      <div className="manachoice">
+      <div>
         <img src={mana.mana.Img} alt={mana.mana.Name + " mana"} />
         <div className="infos">
           <h2>{mana.mana.Name}</h2>
