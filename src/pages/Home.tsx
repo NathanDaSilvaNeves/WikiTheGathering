@@ -10,6 +10,7 @@ import Red from "../assets/img/Red.png";
 import Green from "../assets/img/Green.png";
 import Colorless from "../assets/img/Colorless.png";
 import ManaChoice from "../components/ManaChoice.tsx";
+import Logo from "../components/Logo.tsx";
 
 const Home = () => {
   const { setMana } = useContext(ManaContext);
@@ -26,6 +27,7 @@ const Home = () => {
 
   return (
     <>
+      <Logo />
       <h1>Home</h1>
       <Searchbar />
       <div className="manachoice">
