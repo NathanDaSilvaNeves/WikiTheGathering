@@ -30,14 +30,19 @@ const Home = () => {
       <Logo />
       <h1>Home</h1>
       <Searchbar />
-      {manaList.map((mana) => {
-        console.log(mana.Color);
-        return (
-          <Link to="/list" onClick={() => setMana(mana.Color)}>
-            <ManaChoice mana={mana} />
-          </Link>
-        );
-      })}
+      <div className="manachoice">
+        <ul className="Ul-mana">
+          {manaList.map((mana) => {
+            return (
+              <li className="mana">
+                <Link to="/list" onClick={() => setMana(mana.Color)}>
+                  <ManaChoice mana={mana} />
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </>
   );
 };
