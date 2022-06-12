@@ -28,8 +28,9 @@ const Home = () => {
   return (
     <>
       <Logo />
-      <h1>Home</h1>
-      <Searchbar />
+      <div className="search">
+        <Searchbar />
+      </div>
       <div className="manachoice">
         <ul className="Ul-mana">
           {manaList.map((mana) => {

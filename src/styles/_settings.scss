@@ -19,10 +19,14 @@ $white: rgb(243, 243, 243);
 }
 
 body {
-  background: $white;
+  background: #ECECEC;
   font-family: $font-1;
   // @include verticalCenter;
 }
 li {
   list-style-type: none;
+}
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
 }

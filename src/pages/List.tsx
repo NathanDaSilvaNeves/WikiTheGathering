@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { ManaContext } from "../components/ManaContext.tsx";
 import Cards from "../components/Cards.tsx";
 import Searchbar from "../components/Searchbar.tsx";
-import Return from "../components/Return.tsx";
 import Logo from "../components/Logo.tsx";
 
 function whichMana(Mana) {
@@ -10,36 +9,36 @@ function whichMana(Mana) {
   let nameMana;
   switch (Mana) {
     case "all":
-      nameMana = "all mana"; 
+      nameMana = "all mana";
       chosenMana =
         "o:%22%7BW%7D%22%20OR%20m:%7BW%7D%20OR%20o:%22%7BU%7D%22%20OR%20m:%7BU%7D%20OR%20o:%22%7BB%7D%22%20OR%20m:%7BB%7D%20OR%20o:%22%7BR%7D%22%20OR%20m:%7BR%7D%20OR%20o:%22%7BG%7D%22%20OR%20m:%7BG%7D%20OR%20o:%22%7BC%7D%22%20OR%20m:%7BC%7D";
       break;
     case "b":
-        nameMana = "black"; 
+      nameMana = "black";
       chosenMana = "o:%22%7BB%7D%22%20OR%20m:%7BB%7D";
       break;
     case "w":
-        nameMana = "white"; 
+      nameMana = "white";
       chosenMana = "o:%22%7BW%7D%22%20OR%20m:%7BW%7D";
       break;
     case "r":
-        nameMana = "red"; 
+      nameMana = "red";
       chosenMana = "o:%22%7BR%7D%22%20OR%20m:%7BR%7D";
       break;
     case "g":
-        nameMana = "green"; 
+      nameMana = "green";
       chosenMana = "o:%22%7BG%7D%22%20OR%20m:%7BG%7D";
       break;
     case "c":
-        nameMana = "colorless"; 
+      nameMana = "colorless";
       chosenMana = "o:%22%7BC%7D%22%20OR%20m:%7BC%7D";
       break;
     case "u":
-        nameMana = "blue"; 
+      nameMana = "blue";
       chosenMana = "o:%22%7BU%7D%22%20OR%20m:%7BU%7D";
       break;
     default:
-        nameMana = "all mana";
+      nameMana = "all mana";
       chosenMana =
         "o:%22%7BW%7D%22%20OR%20m:%7BW%7D%20OR%20o:%22%7BU%7D%22%20OR%20m:%7BU%7D%20OR%20o:%22%7BB%7D%22%20OR%20m:%7BB%7D%20OR%20o:%22%7BR%7D%22%20OR%20m:%7BR%7D%20OR%20o:%22%7BG%7D%22%20OR%20m:%7BG%7D%20OR%20o:%22%7BC%7D%22%20OR%20m:%7BC%7D";
       break;
@@ -48,35 +47,35 @@ function whichMana(Mana) {
 }
 
 function whichManaName(Mana) {
-    let nameMana;
-    switch (Mana) {
-      case "all":
-        nameMana = "all mana"; 
-        break;
-      case "b":
-          nameMana = "black"; 
-        break;
-      case "w":
-          nameMana = "white"; 
-        break;
-      case "r":
-          nameMana = "red"; 
-        break;
-      case "g":
-          nameMana = "green"; 
-        break;
-      case "c":
-          nameMana = "colorless"; 
-        break;
-      case "u":
-          nameMana = "blue"; 
-        break;
-      default:
-          nameMana = "all mana";
-        break;
-    }
-    return nameMana;
+  let nameMana;
+  switch (Mana) {
+    case "all":
+      nameMana = "all mana";
+      break;
+    case "b":
+      nameMana = "black";
+      break;
+    case "w":
+      nameMana = "white";
+      break;
+    case "r":
+      nameMana = "red";
+      break;
+    case "g":
+      nameMana = "green";
+      break;
+    case "c":
+      nameMana = "colorless";
+      break;
+    case "u":
+      nameMana = "blue";
+      break;
+    default:
+      nameMana = "all mana";
+      break;
   }
+  return nameMana;
+}
 
 const List = () => {
   const { mana } = useContext(ManaContext);
@@ -98,10 +97,10 @@ const List = () => {
   return (
     <div>
       <Logo />
-      <h1>List</h1>
-      <Return />
-      <Searchbar />
-      <p>the choosen mana is {whichManaName({mana}.mana)}</p>
+      <div className="search">
+        <Searchbar />
+        <p>The choosen mana is {whichManaName({ mana }.mana)}</p>
+      </div>
       <Cards cards={data} />
     </div>
   );
