@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState} from 'react';
 import Cards from '../components/Cards.tsx';
+import Logo from '../components/Logo.tsx';
 import Return from '../components/Return.tsx';
 import { SearchContext } from '../components/SearchContext.tsx';
 
@@ -50,6 +51,7 @@ const Search = () => {
     }
     return (
         <div>
+            <Logo />
             <h1>Search</h1>
             <Return />
             <div>

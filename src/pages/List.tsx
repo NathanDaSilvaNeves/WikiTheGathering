@@ -3,6 +3,7 @@ import { ManaContext } from "../components/ManaContext.tsx";
 import Cards from "../components/Cards.tsx";
 import Searchbar from "../components/Searchbar.tsx";
 import Return from "../components/Return.tsx";
+import Logo from "../components/Logo.tsx";
 
 function whichMana(Mana) {
   let chosenMana;
@@ -56,6 +57,7 @@ const List = () => {
 
   return (
     <div>
+      <Logo />
       <h1>List</h1>
       <Return />
       <Searchbar />
