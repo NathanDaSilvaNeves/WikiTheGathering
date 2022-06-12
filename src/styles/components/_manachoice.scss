@@ -1,8 +1,7 @@
 .manachoice{
     //justify-content: space-around;
     //align-items:flex-end;
-    //margin: 20px;
-    width: 20%;
+    width: 30%;
     min-width: 130px;
     background: lightgray;
     border-radius: 20px;
@@ -10,13 +9,32 @@
     float: left;
     margin-left: auto;
     margin-right: auto;
-    h2 {
-        text-align: center;
-    }
+    text-align: center;
 
     img {
       display: block;
       margin: auto;
       height: 100px;
     }
+  }
+
+  @media screen and (min-width: 768px) {
+    .manachoice {
+      height: 10%;
+      width: 25%;
+    }
+  }
+  
+  @media screen and (min-width: 600px) and (max-width: 768px) {
+    .manachoice {
+      height: 10%;
+      width: 50%;
+    }
+  }
+  
+    @media screen and (max-width: 600px) {
+      .manachoice {
+        height: 10%;
+        width: 100%;
+      }
   }
