@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Ul-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: row;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    height: 10%;
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .card {
+    height: 10%;
+    width: 50%;
+  }
+}
+
+  @media screen and (max-width: 600px) {
+    .card {
+      height: 10%;
+      width: 100%;
+    }
+}
+

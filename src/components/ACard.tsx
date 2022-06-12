@@ -3,19 +3,17 @@ import ICard from '../interfaces/ICard';
 
 const ACard = ({ card }: ICard["cards"]) => {
     const isRectoVerso = card.card_faces
-    let img;
+    let aCard;
     if (isRectoVerso) {
-        img = <img src={card.card_faces[0].image_uris.small} alt={card.name} />
+        if (!isRectoVerso[1].image_uris === undefined) {
+            aCard = <li className="card"><img src={isRectoVerso[1].image_uris.small} alt={card.name} /><h2>card.name</h2></li>
+        }
     } else {
-        img = <img src={card.image_uris.small} alt={card.name} />
+        aCard = <li className="card"><img src={card.image_uris.small} alt={card.name} /><h2>{card.name}</h2></li>
     }
 
-    return (
-        <li className="card">
-            {img}
-            <h2>{card.name}</h2>
-        </li>
-    );
+
+    return aCard;
 };
 
 export default ACard;

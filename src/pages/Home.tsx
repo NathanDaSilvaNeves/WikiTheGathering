@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import {BrowserRouter as Router, Link} from 'react-router-dom';
 import { ManaContext } from '../components/ManaContext.tsx';
+import Searchbar from '../components/Searchbar.tsx';
 import All from '../assets/img/All.png';
 import Blue from '../assets/img/Blue.png';
 import Black from '../assets/img/Black.png';
@@ -17,6 +18,7 @@ const Home = () => {
     return (
         <>
             <h1>Home</h1>
+            <Searchbar />
             {manaList.map(mana => {
                 return(<Link to="/list">
                     <img src={mana.Img} alt={mana.Name+ " mana"} onClick={() => setMana(mana.Color)} />
@@ -29,4 +31,5 @@ const Home = () => {
     );
 };
 
+// 
 export default Home;
